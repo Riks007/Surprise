@@ -66,7 +66,7 @@ const Home: React.FC = () => {
     >
       {showMessage ? (
         <>
-          <h1 className="text-6xl font-extrabold text-yellow-300 drop-shadow-lg">
+          <h1 className="text-6xl font-extrabold text-yellow-300 drop-shadow-lg mt-20">
             {birthdayMessage}
           </h1>
           <p className="text-lg text-gray-300 mt-4">{typedMessage}</p>
@@ -75,9 +75,9 @@ const Home: React.FC = () => {
           {showImage && (
             <div style={{
               position: 'absolute',
-              top: '50%', // Vertically center the image
-              left: '10%', // Keep your specified left position
-              transform: 'translateY(-50%)', // Center the image vertically
+              top: '10%', // Vertically center the image
+              left: '50%', // Center horizontally
+              transform: 'translate(-50%, -50%)', // Center the image vertically
               opacity: imageOpacity, // Control image opacity for fade effect
               transition: 'opacity 1s ease-in-out', // Smooth fade transition
             }}>
@@ -85,9 +85,12 @@ const Home: React.FC = () => {
                 src="/Bandar.jpg" // Update with your image path
                 alt="Birthday Decoration"
                 style={{
-                  width: '20%',
+                  width: '100%', // Set to 100% of its container
+                  maxWidth: '300px', // Max width to prevent overflow
+                  height: 'auto', // Maintain aspect ratio
                   display: 'block', // Prevent overflow
                   borderRadius: '40px',
+                  marginBottom: '20px',
                 }}
               />
             </div>
