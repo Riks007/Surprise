@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   const [typedMessage, setTypedMessage] = useState("");
   const [showImage, setShowImage] = useState<boolean>(false); // Control visibility
   const birthdayMessage = "🎉 Happy Birthday! Mr. Gounder 🎂 ";
-  const wishesMessage = "Wishing you a fantastic day filled with joy and surprises!";
+  const wishesMessage = "❤️ I love you! ❤️";
   const [imageOpacity, setImageOpacity] = useState<number>(0); // Control image opacity
 
   // Fireworks effect
